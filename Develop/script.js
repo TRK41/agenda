@@ -1,4 +1,14 @@
 //current day time 
-const todayDate = document.getElementById('currentDay');
+setInterval(function(){
+     var todayDate = moment().format('MMMM Do YYYY h:mm:ss a');
+     $("#currentDay").text(todayDate);
+    }, 1000);
 
-$moment().format('MMMM Do YYYY');
+//$("#currentDay").text(todayDate);
+
+
+
+
+//eightAM = moment().
+
+
