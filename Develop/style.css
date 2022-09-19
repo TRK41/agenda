@@ -44,7 +44,7 @@ textarea {
   color: #000000;
   border-top: 1px dashed #000000;
 }
-#amBlock {
+input {
   background-color: lightgray;
   white-space: pre-wrap;
   border-top: 1px solid white;
