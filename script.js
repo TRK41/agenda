@@ -11,6 +11,7 @@ var t5 = document.getElementById("five");
 const saveBtnArr = document.querySelectorAll('button');
 var arr = $(".8am")
 
+
 for (let saveBtn of saveBtnArr) {
 
      saveBtn.addEventListener('click', function (event) {
@@ -27,7 +28,9 @@ for (let saveBtn of saveBtnArr) {
           localStorage.setItem("5pm", JSON.stringify(t5.value));
 
 
-     
+          window.onbeforeunload = function() {
+               localStorage.setItem("8am", JSON.stringify(t8.value));
+          }
      
      function saveTime() {
           let notes = localStorage.getItem("notes")
@@ -44,6 +47,18 @@ for (let saveBtn of saveBtnArr) {
           saveTime()
 });
 }
+     
+document.getElementById("eight").value = JSON.parse(localStorage.getItem("8am"));
+document.getElementById("nine").value = JSON.parse(localStorage.getItem("9am"));
+document.getElementById("ten").value = JSON.parse(localStorage.getItem("10am"));
+document.getElementById("eleven").value = JSON.parse(localStorage.getItem("11am"));
+document.getElementById("twelve").value = JSON.parse(localStorage.getItem("12pm"));
+document.getElementById("one").value = JSON.parse(localStorage.getItem("1pm"));
+document.getElementById("two").value = JSON.parse(localStorage.getItem("2pm"));
+document.getElementById("three").value = JSON.parse(localStorage.getItem("3pm"));
+document.getElementById("four").value = JSON.parse(localStorage.getItem("4pm"));
+document.getElementById("five").value = JSON.parse(localStorage.getItem("5pm"));
+
 
 //current day time (real time)
 setInterval(function time() {
