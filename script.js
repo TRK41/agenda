@@ -1,4 +1,4 @@
-var t8 = document.getElementById("eight");
+var t8 = document.getElementById("eight"); //setting up the variables for each time slot
 var t9 = document.getElementById("nine");
 var t10 = document.getElementById("ten");
 var t11 = document.getElementById("eleven");
@@ -8,7 +8,7 @@ var t2 = document.getElementById("two");
 var t3 = document.getElementById("three");
 var t4 = document.getElementById("four");
 var t5 = document.getElementById("five");
-const saveBtnArr = document.querySelectorAll('button');
+const saveBtnArr = document.querySelectorAll('button'); // constant made for the save button 
 var arr = $(".8am")
 
 
@@ -28,11 +28,8 @@ for (let saveBtn of saveBtnArr) {
           localStorage.setItem("5pm", JSON.stringify(t5.value));
 
 
-          window.onbeforeunload = function() {
-               localStorage.setItem("8am", JSON.stringify(t8.value));
-          }
-     
-     function saveTime() {
+     //function for saving the value to the key 
+     function saveTime() { 
           let notes = localStorage.getItem("notes")
           var storedNotes = JSON.parse(localStorage.getItem("8am",t8.value));
           
@@ -48,7 +45,7 @@ for (let saveBtn of saveBtnArr) {
 });
 }
      
-document.getElementById("eight").value = JSON.parse(localStorage.getItem("8am"));
+document.getElementById("eight").value = JSON.parse(localStorage.getItem("8am"));//takeing the key and value from local storage
 document.getElementById("nine").value = JSON.parse(localStorage.getItem("9am"));
 document.getElementById("ten").value = JSON.parse(localStorage.getItem("10am"));
 document.getElementById("eleven").value = JSON.parse(localStorage.getItem("11am"));
