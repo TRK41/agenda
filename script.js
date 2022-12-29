@@ -59,20 +59,28 @@ document.getElementById("three").value = JSON.parse(localStorage.getItem("3pm"))
 document.getElementById("four").value = JSON.parse(localStorage.getItem("4pm"));
 document.getElementById("five").value = JSON.parse(localStorage.getItem("5pm"));
 
-
+var todayDate = moment().format('MMMM Do YYYY h:mm:ss a');
 //current day time (real time)
 setInterval(function time() {
-     var todayDate = moment().format('MMMM Do YYYY h:mm:ss a');
+     
      $("#currentDay").text(todayDate);
 }, 1000);
 
 
 
-//8am
-//  const eight = '08:00:00'
-//  const format = 'hh:mm:ss A'
+// 8am
+ const eight = '08:00:00'
+ const format = 'hh:mm:ss A'
 
-//  var beforetime = moment(eight,format);
+ var beforetime = moment(eight,format);
 
-//  if (moment(time).isBefore(eight.valueOf)
-//  (document.querySelector(".past") = document.getElementById('input')));
+ if (moment(todayDate).isBefore(eight.valueOf)
+ (document.querySelector(".past") = document.getElementById('input')));
+
+function timechange() {
+const t8 = new Date();
+t8.setHours(8, 59, 59)
+console.log(t8.value)
+
+
+}
