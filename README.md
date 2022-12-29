@@ -5,7 +5,7 @@ Making it practical for everyday use.
 There is also a colour theme based on the time of events and the current time.
 Which makes the scheduler user-friendly.
 
-![alt text](Screenshot (4).png)
+![alt text](Assets/Screenshot (4).png)
 
 
 https://trk41.github.io/agenda/
