@@ -68,19 +68,3 @@ setInterval(function time() {
 
 
 
-// 8am
- const eight = '08:00:00'
- const format = 'hh:mm:ss A'
-
- var beforetime = moment(eight,format);
-
- if (moment(todayDate).isBefore(eight.valueOf)
- (document.querySelector(".past") = document.getElementById('input')));
-
-function timechange() {
-const t8 = new Date();
-t8.setHours(8, 59, 59)
-console.log(t8.value)
-
-
-}
